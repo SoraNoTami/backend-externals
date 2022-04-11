@@ -1,16 +1,9 @@
 const axios = require("axios");
 const express = require('express');
 const app = express();
-const router = express.Router();
 const gameOfThrone = require('./routes/game-of-throne.js')
 const pokemon = require('./routes/pokemon')
 const port = 8000
-
-router.get('', function(req, res){
-    res.json({ 'success' : true });
-});
-
-module.exports = router;
 
 app.get('/', (req, res) => {
     res.send('Externals API');

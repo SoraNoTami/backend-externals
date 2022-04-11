@@ -1,7 +1,12 @@
 const axios = require("axios");
 const express = require('express');
 const app = express();
+const router = express.Router();
 const port = 8000
+
+router.get('', function(req, res){
+    res.json({ 'success' : true });
+});
 
 app.get('/pokemon/:limit/:offset', (req, res) => {
     const limit = req.params.limit
@@ -17,3 +22,5 @@ app.get('/pokemon/:id', (req, res) => {
         res.json(resultat.data)
     })
 })
+
+module.exports = router;
