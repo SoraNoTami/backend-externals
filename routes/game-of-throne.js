@@ -1,7 +1,6 @@
 const axios = require("axios");
 const express = require('express');
 const router = express.Router();
-const app = express();
 const port = 8000
 
 router.get('/', function(req, res){
